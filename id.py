@@ -1,7 +1,19 @@
-import uuid 
-# Printing random id using uuid1() 
-print ("The random id using uuid4() is : ",end="") 
-print (uuid.uuid4()) 
+import random
+import string
 
-# Output
-# The random id using uuid1() is : 67460e74-02e3-11e8-b443-00163e990bdb
+print('This is an unique id generator!')
+
+length = int(input('\nEnter the length of the id: '))                      
+
+#define data
+lower = string.ascii_lowercase
+upper = string.ascii_uppercase
+num = string.digits
+symbols = string.punctuation
+
+all = lower + upper + num + symbols
+
+temp = random.sample(all,length)
+ 
+id = "".join(temp)
+print(id)
