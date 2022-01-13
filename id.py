@@ -1,19 +1,10 @@
-import random
-import string
+username=input("enter your name::")
 
-print('This is an unique id generator!')
+import uuid
 
-length = int(input('\nEnter the length of the id: '))                      
+print ("The random id is : ",end="")
+print (uuid.uuid1())
 
-#define data
-lower = string.ascii_lowercase
-upper = string.ascii_uppercase
-num = string.digits
-symbols = string.punctuation
-
-all = lower + upper + num + symbols
-
-temp = random.sample(all,length)
- 
-id = "".join(temp)
-print(id)
+from datetime import datetime
+now=datetime.now()
+print("Request Time: ",now.strftime("%Y-%m-%d %H:%M:%S"))
